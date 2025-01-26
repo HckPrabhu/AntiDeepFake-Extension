@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Advanced Video Analysis Extension",
+  "version": "1.2",
+  "description": "Real-time video analysis for deepfakes, pose detection, YOLO object detection, and general object detection",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "tfjs/tf-core.js",
+        "tfjs/tf-converter.js",
+        "tfjs/tf-backend-webgl.js",
+        "models/efficientnet_b0/model.json",
+        "models/posenet/model.json",
+        "models/yolo/model.json",
+        "models/mobilenet/model.json"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
+
