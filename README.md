@@ -8,6 +8,7 @@ Technologies Used
 Installation
 Usage
 Current Status
+Project Status
 Upcoming Version
 Contributing
 License
@@ -53,6 +54,15 @@ Browsing: As you navigate the web, the extension will analyze images and videos 
 Current Status
 The AntiDeepFake Extension has successfully passed its initial development phase, providing effective detection for images and videos encountered during browsing. Users can now feel more secure while consuming media online.
 
+Project Status
+The AntiDeepFake Extension is currently a work in progress, with ongoing efforts to enhance its functionality and user experience. Key areas of focus include:
+
+Improving Detection Algorithms: We are continuously refining the machine learning models to increase accuracy and reduce false positives. While some work in the models area is still pending, the current functionality is performing well, so you can count on its effectiveness.
+
+User Feedback Integration: Actively seeking user feedback to identify pain points and areas for improvement in the user interface and overall experience.
+
+Expanding Educational Resources: Developing additional resources and tutorials to help users better understand deepfakes and how to use the extension effectively.
+
 Upcoming Version
 We are excited to announce that the next version of the AntiDeepFake Extension will enhance its capabilities by making deepfake detection easier during video calls. This upcoming feature aims to provide real-time alerts and analysis during live interactions, ensuring users can identify manipulated content in real-time, thereby enhancing trust and security in virtual communications.
 
@@ -61,8 +71,3 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-Acknowledgments
-TensorFlow.js for machine learning capabilities.
-OpenCV for image processing techniques.
-Special thanks to the open-source community for their invaluable resources and support.
