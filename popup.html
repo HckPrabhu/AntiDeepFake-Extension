@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Video Analysis</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white p-4 w-96">
+  <div class="container mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Advanced Video Analysis</h1>
+    
+    <div class="bg-gray-800 rounded-lg shadow-lg p-4 mb-4">
+      <h2 class="text-xl font-semibold mb-2">Scan Controls</h2>
+      <div class="flex space-x-2">
+        <button id="startScan" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+          Start Scan
+        </button>
+        <button id="stopScan" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded hidden">
+          Stop Scan
+        </button>
+      </div>
+    </div>
+    
+    <div class="bg-gray-800 rounded-lg shadow-lg p-4 mb-4">
+      <h2 class="text-xl font-semibold mb-2">Real-time Analysis</h2>
+      <div id="miniMonitor" class="w-full h-48 bg-black rounded-lg relative overflow-hidden">
+        <video id="videoPreview" class="w-full h-full object-cover" autoplay muted></video>
+        <canvas id="overlayCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
+      </div>
+    </div>
+    
+    <div class="bg-gray-800 rounded-lg shadow-lg p-4 mb-4">
+      <h2 class="text-xl font-semibold mb-2">Detection Results</h2>
+      <div id="detectionResults" class="space-y-2">
+        <div class="flex justify-between">
+          <span>Deepfake:</span>
+          <span id="deepfakeResult">N/A</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Pose Detection:</span>
+          <span id="poseResult">N/A</span>
+        </div>
+        <div class="flex justify-between">
+          <span>YOLO Objects:</span>
+          <span id="yoloResult">N/A</span>
+        </div>
+        <div class="flex justify-between">
+          <span>General Objects:</span>
+          <span id="objectResult">N/A</span>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-800 rounded-lg shadow-lg p-4 mb-4">
+  <h2 class="text-xl font-semibold mb-2">Simulated Scan Result</h2>
+  <div id="simulatedScanResult" class="text-center text-2xl font-bold">
+    Click 'Start Scan' to begin
+  </div>
+</div>
+    <div id="notification" class="fixed bottom-4 right-4 bg-blue-500 text-white p-2 rounded-lg shadow-lg hidden"></div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
+
